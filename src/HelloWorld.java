@@ -3,40 +3,50 @@
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        // variable declaration
-        String message;
+        // declaring
+        int favoriteNumber;
 
-        // variable assignment, first time assignment is called initialization
-        message = "Hello, World!";
-        System.out.println(message);
+        // initializing (assigning for the first time)
+        favoriteNumber = 23;
+        System.out.println(favoriteNumber);
 
-        // declare/initialize on one line
-        int favoriteNumber = 23;
-        System.out.println("My favorite number is " + favoriteNumber);
+        String myString = "Happy Un-birthday!";
+        System.out.println(myString);
 
-        // reassigning the variable
-        favoriteNumber = 5;
-        System.out.println("My favorite number changed and it's now " + favoriteNumber);
+        // myString = 'c'; assigning a char to a string is a compilation error
+        // myString = 5; can't assign a number to a String variable
 
+        float myNumber;
+        // cannot sout or operate on an uninitialized variable. Won't compile.
+        // myNumber = 3.141; // cannot assign a double to a long w/o explicit casting
+        // myNumber = (long) 3.141; will work b/c of the explicit casting.
 
-        int age = 19;
+        myNumber = 123L; // the L appended to the end is part of how we know this is a Long data type
+        myNumber = 123; // works OK b/c 123 is a valid long.
+        System.out.println(myNumber);
 
-        // declare the variable
-        boolean canRentCar;
+        float someNumber = 3.141F;
 
-        // conditional assignment
-        if(age > 25) {
-            canRentCar = true;
-        } else {
-            canRentCar = false;
-        }
+        int x = 5;
+        System.out.println(++x);
+        System.out.println(x);
 
-        final String MY_NAME;
-        MY_NAME = "Ryan";
+        int y = 4;
+        // y = y + 5;
+        y += 5;
+        System.out.println(y);
 
-        System.out.println(MY_NAME);
+        int a = 3;
+        int b = 4;
+        // reassignment
+        // y = y * x;
+        b *= a;
 
-
-
+        int c = 10;
+        int d = 2;
+        // x = x / y;
+        // y = y - x;
+        c /= d;
+        d -= c;
     }
 }
