@@ -3,10 +3,40 @@
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        System.out.println("Hello, world!");
+        // variable declaration
+        String message;
 
-        System.out.println(); // An empty sout gives you a new line
-        System.out.println("The shortcut to make a main method is psvm followed by tab..");
-        System.out.println("The shortcut for System.out.println() is sout then a tab...");
+        // variable assignment, first time assignment is called initialization
+        message = "Hello, World!";
+        System.out.println(message);
+
+        // declare/initialize on one line
+        int favoriteNumber = 23;
+        System.out.println("My favorite number is " + favoriteNumber);
+
+        // reassigning the variable
+        favoriteNumber = 5;
+        System.out.println("My favorite number changed and it's now " + favoriteNumber);
+
+
+        int age = 19;
+
+        // declare the variable
+        boolean canRentCar;
+
+        // conditional assignment
+        if(age > 25) {
+            canRentCar = true;
+        } else {
+            canRentCar = false;
+        }
+
+        final String MY_NAME;
+        MY_NAME = "Ryan";
+
+        System.out.println(MY_NAME);
+
+
+
     }
 }
