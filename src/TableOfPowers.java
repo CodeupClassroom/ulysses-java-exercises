@@ -13,8 +13,8 @@ public class TableOfPowers {
         int number = input.nextInt();
 
         System.out.println("Here is your table!");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
+        System.out.println("number | squared | cubed |");
+        System.out.println("------ | ------- | ----- |");
 
         for (int i = 1; i <= number; i++) {
 //            System.out.println(i + "      | " + i * i + "       | " + i * i * i);
@@ -23,7 +23,7 @@ public class TableOfPowers {
             // cmd + opt + v
             int squared = i * i;
             int cubed = i * i * i;
-            System.out.printf("%d      | %d       | %d    |%n", i, squared, cubed);
+            System.out.printf("%-7d| %-8d| %-6d|%n", i, squared, cubed);
         }
     }
 }
