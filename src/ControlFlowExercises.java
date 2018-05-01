@@ -4,22 +4,25 @@
 
 public class ControlFlowExercises {
     public static void main(String[] args) {  // global scope
-        int /* type declaration */ i = 5; // variable declaration, followed by an assignment
+        int /* type declaration */ i; // variable declaration, followed by an assignment
 
-        while (
-            i <= 15 /* boolean expression -> the condition to stop */
+        for (
+            i = 5 /* initialization */;
+            i <= 15 /* boolean expression -> the condition to stop */;
+            i++/* increment*/
         ) {
             System.out.println(i);
-            i++;
 //             i += 1;
 //             i = i + 1;
         }
 
-        i = 0;
-        do { // do while body
+        for (
+            i = 0; /* initialization */
+            i <= 100 /* condition to continue*/;
+            i += 2 /* increment */
+        ) { // do while body
             System.out.println(i);
-            i += 2;
-        } while (i <= 100 /* condition to continue*/);
+        }
 
     }
 }
