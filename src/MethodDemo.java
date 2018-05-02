@@ -5,6 +5,8 @@ public class MethodDemo {
     public static void main(String[] args) {
         greeting();
         sayHello("Luis");
+        System.out.println(power(2, 10));
+        System.out.println(power(3));
 
         int number;
 
@@ -13,6 +15,27 @@ public class MethodDemo {
             System.out.println("You said that " + number + " is your favorite number.");
 
         } while(wantsToContinue());
+    }
+
+    public static String sayGoodBye(String nickname) { // family/friends
+        return "Goodbye " + nickname;
+    }
+
+    public static String sayGoodBye() { // people we just met
+        return "Goodbye!";
+    }
+
+    public static int power(int number) {
+//        return number;
+        return power(number, 1);
+    }
+
+    public static int power(int number, int exponent) {
+        int result = 1;
+        for (int i = 0; i < exponent; i++) {
+            result *= number;
+        }
+        return result;
     }
 
     public static void greeting() {
