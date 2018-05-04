@@ -8,18 +8,20 @@ public class Person {
     // property /  field / attribute / instance variable
     private String name;
 
-    // returns the person's name
-    public String getName() {
-        return null;
+    // method's signature
+    // getter -> prefix get
+    public String /* return type*/ getName /* method name */( /* number of parameters, names/types*/) {
+        return name;
     }
 
-    // changes the name property to the passed value
+    // A name cannot be empty
     public void setName(String name) {
-
+        if (name.isEmpty()) System.out.println("That is invalid!");
+        else this.name = name;
     }
 
     // prints a message to the console using the person's name
     public void sayHello() {
-
+        System.out.printf("Hello %s!%n", name);
     }
 }
