@@ -17,7 +17,7 @@ public class Input {
     public String getString() {
         return scanner.nextLine();
     }
-    boolean yesNo() {
+    public boolean yesNo() {
         String answer = scanner.nextLine();  // null
         // auto-boxing => value (string) -> wrap it in a an object -> new String("y").equalsIgnoreCase()
         return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
@@ -42,6 +42,8 @@ public class Input {
         return value;
     }
     public double getDouble() {
-        return scanner.nextDouble();
+        double number = scanner.nextDouble();
+        scanner.nextLine();
+        return number;
     }
 }
