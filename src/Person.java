@@ -29,4 +29,9 @@ public class Person {
     public void sayHello() {
         System.out.printf("Hello %s!%n", name);
     }
+
+    // Create a main method
+    public static void main(String[] args) {
+
+    }
 }
