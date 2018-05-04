@@ -30,6 +30,10 @@ public class Person {
         System.out.printf("Hello %s!%n", name);
     }
 
+    public void nameToUppercase(Person person) {
+        person.setName(person.getName().toUpperCase());
+    }
+
     // Create a main method
     public static void main(String[] args) {
         // creates a new Person object and tests the above methods.
@@ -48,5 +52,10 @@ public class Person {
         person2.setName("Jane");
         person1.sayHello();
         person2.sayHello();
+
+        // Arguments are passed by reference
+        person.nameToUppercase(person2);
+        person2.sayHello();
+        person1.sayHello();
     }
 }
