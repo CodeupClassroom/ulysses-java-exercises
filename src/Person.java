@@ -32,6 +32,21 @@ public class Person {
 
     // Create a main method
     public static void main(String[] args) {
+        // creates a new Person object and tests the above methods.
+        Person person = new Person("Ryan");
+        System.out.println(person.getName());
+        person.setName("Ryan 2.0");
+        person.sayHello();
 
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName()));
+//        System.out.println(person1 == person2);  // are this 2 things pointing to the same values
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1 == person2);
+        person2.setName("Jane");
+        person1.sayHello();
+        person2.sayHello();
     }
 }
