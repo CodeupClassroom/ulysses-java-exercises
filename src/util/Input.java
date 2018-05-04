@@ -33,7 +33,7 @@ public class Input {
     int getInt() {
         return scanner.nextInt();
     }
-    double getDouble(double min, double max) {
+    public double getDouble(double min, double max) {
         double value = getDouble();
         if (value < min || value > max) {
             System.out.printf("Enter a number between %f and %f%n", min, max);
@@ -41,7 +41,7 @@ public class Input {
         }
         return value;
     }
-    double getDouble() {
+    public double getDouble() {
         return scanner.nextDouble();
     }
 }
