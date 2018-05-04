@@ -14,24 +14,34 @@ public class Input {
     public Input() {
         scanner = new Scanner(System.in);
     }
-
     public String getString() {
-        return null;
+        return scanner.nextLine();
     }
-
     boolean yesNo() {
-        return true;
+        String answer = scanner.nextLine();  // null
+        // auto-boxing => value (string) -> wrap it in a an object -> new String("y").equalsIgnoreCase()
+        return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
     }
     int getInt(int min, int max) {
-        return 0;
+        int value = getInt();
+        if (value < min || value > max) {
+            System.out.printf("Enter a number between %d and %d%n", min, max);
+            return getInt(min, max);
+        }
+        return value;
     }
     int getInt() {
-        return 0;
+        return scanner.nextInt();
     }
     double getDouble(double min, double max) {
-        return 0;
+        double value = getDouble();
+        if (value < min || value > max) {
+            System.out.printf("Enter a number between %f and %f%n", min, max);
+            return getDouble(min, max);
+        }
+        return value;
     }
     double getDouble() {
-        return 0;
+        return scanner.nextDouble();
     }
 }
