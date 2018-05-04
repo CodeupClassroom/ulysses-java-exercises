@@ -8,6 +8,11 @@ public class Person {
     // property /  field / attribute / instance variable
     private String name;
 
+    // The class should have a constructor that accepts a string value and sets the person's name to the passed string.
+    public Person(String name) { // A new person cannot have an empty name
+        setName(name);  // self-encapsulation
+    }
+
     // method's signature
     // getter -> prefix get
     public String /* return type*/ getName /* method name */( /* number of parameters, names/types*/) {
