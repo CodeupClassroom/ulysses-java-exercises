@@ -9,9 +9,9 @@ public class Circle {
         this.radius = radius;
     }
     public double getArea() {
-        return 0;
+        return Math.PI * radius * radius;
     }
     public double getCircumference() {
-        return 0;
+        return Math.PI * 2 * radius;
     }
 }
