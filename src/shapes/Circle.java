@@ -8,4 +8,10 @@ public class Circle {
     public Circle(double radius) {
         this.radius = radius;
     }
+    public double getArea() {
+        return 0;
+    }
+    public double getCircumference() {
+        return 0;
+    }
 }
