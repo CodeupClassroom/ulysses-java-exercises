@@ -21,4 +21,8 @@ public class Circle {
     public static int getCircleCount() {
         return circleCount;
     }
+
+    public double getRadius() {
+        return radius;
+    }
 }
