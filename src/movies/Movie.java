@@ -9,19 +9,11 @@ public class Movie {
         this.category = category;
     }
 
-    public String getName() {
-        return name;
+    public String toString() { // override
+        return name + ", Category: " + category;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
+    public boolean isInCategory(String category) {
+        return this.category.equals(category);
     }
 }

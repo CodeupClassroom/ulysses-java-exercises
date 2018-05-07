@@ -5,6 +5,7 @@ import util.Input;
 public class MoviesApplication {
 
     public static Movie[] movies = MoviesArray.findAll();
+    public static Input input = new Input();
 
     public static void main(String[] args) {
         System.out.println("Welcome to MovieApp!");
@@ -30,7 +31,6 @@ public class MoviesApplication {
     }
 
     public static int getChoice() {
-        Input input = new Input();
         return input.getInt();
     }
 
@@ -58,14 +58,14 @@ public class MoviesApplication {
 
     public static void showMovies() {
         for(Movie movie : movies) {
-            System.out.println(movie.getName() + ", Category: " + movie.getCategory());
+            System.out.println(movie);
         }
     }
 
     public static void showMovies(String category) {
         for(Movie movie : movies) {
-            if(movie.getCategory().equals(category)) {
-                System.out.println(movie.getName() + ", Category: " + movie.getCategory());
+            if(movie.isInCategory(category)) {
+                System.out.println(movie);
             }
         }
     }
