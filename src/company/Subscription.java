@@ -25,5 +25,9 @@ public class Subscription extends Product {
         return numberOfMonths * price;
     }
 
+    public String getName() {
+        return "A " + numberOfMonths + " subscription to " + name + "magazine.";
+    }
+
 
 }

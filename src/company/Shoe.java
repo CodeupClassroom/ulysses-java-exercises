@@ -9,4 +9,8 @@ public class Shoe extends Product {
         this.size = size;
         this.style = style;
     }
+
+    public String getName() {
+        return style + " " + name;
+    }
 }

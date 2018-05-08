@@ -21,6 +21,10 @@ public class Product {
         this.type = type;
     }
 
+    public double getProfit() {
+        return price - cost;
+    }
+
     public double getPrice() {
         return price;
     }
