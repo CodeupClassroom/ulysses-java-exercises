@@ -28,7 +28,7 @@ public class InventoryApplication {
             userProduct = new Car("Betty", 30000, 10000, "Buick", "Skylark");
 
         } else if(userChoice.equalsIgnoreCase("shoe")) {
-            userProduct = new Shoe("Bootsy", 200, 50, 7, "Combat Boot");
+            userProduct = new Shoe("Bootsy Collins", 200, 50, 7, "Combat Boot");
 
         } else if(userChoice.equalsIgnoreCase("subscription")) {
             userProduct = new Subscription("Computer Buyer Monthly", 10, 2, 24);
@@ -45,9 +45,9 @@ public class InventoryApplication {
     public static void showProducts(Product[] products) {
         for(Product product : products) {
 
-            System.out.println("Product is: " + product.getName());
+            System.out.println("Product is: " + product.getName()); // polymorphism, yo! b/c each product has a different implementation of .getName()
 
-            System.out.println("Company profit is: " + product.getProfit());
+            System.out.println("Company profit is: " + product.getProfit()); // polymorphic b/c the calling code doesn't need to behave differently
         }
     }
 
