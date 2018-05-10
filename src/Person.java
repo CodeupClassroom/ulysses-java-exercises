@@ -13,6 +13,9 @@ public class Person {
         setName(name);  // self-encapsulation
     }
 
+    public String toString() {
+        return name;
+    }
     // method's signature
     // getter -> prefix get
     public String /* return type*/ getName /* method name */( /* number of parameters, names/types*/) {
