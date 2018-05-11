@@ -24,7 +24,7 @@ public class GradesApplication {
                 Student student = students.get(userChoice);
                 System.out.println(student);
 
-                promptForGradeDetail();
+                promptForGradeDetail(student);
 
             } else {
                 System.out.println(userChoice + " was not found in our system.");
@@ -33,6 +33,18 @@ public class GradesApplication {
             }
 
         } while(input.yesNo("Would you like information on another student? Press y or yes to continue."));
+
+        if(input.yesNo("Would you like to see all students and grades?")) {
+            showAllStudentsAndGrades(students);
+        }
+
+        System.out.println("Thank you for using Grades Application");
+    }
+
+    protected static void showAllStudentsAndGrades(HashMap<String, Student> students) {
+        students.forEach((key, student) -> {
+            System.out.println(key + "'s" + " grade average is a " + student.getGradeAverage());
+        });
     }
 
     protected static void promptToAddNewStudent() {
