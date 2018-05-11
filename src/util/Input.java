@@ -12,17 +12,30 @@ public class Input {
 
     // option 2 -> Create a constructor
     public Input() {
-        scanner = new Scanner(System.in);
+        scanner = new Scanner(System.in).useDelimiter("\n");
     }
+
     public String getString() {
-        return scanner.nextLine();
+        return scanner.next();
     }
+
+    public String getString(String prompt) {
+        System.out.println(prompt);
+        return getString();
+    }
+
     public boolean yesNo() {
-        String answer = scanner.nextLine();  // null
+        String answer = scanner.next();  // null
         // auto-boxing => value (string) -> wrap it in a an object -> new String("y").equalsIgnoreCase()
         return "y".equalsIgnoreCase(answer) || "yes".equalsIgnoreCase(answer);
     }
-    int getInt(int min, int max) {
+
+    public boolean yesNo(String prompt) {
+        System.out.print(prompt);
+        return yesNo();
+    }
+
+    public int getInt(int min, int max) {
         int value = getInt();
         if (value < min || value > max) {
             System.out.printf("Enter a number between %d and %d%n", min, max);
@@ -43,7 +56,7 @@ public class Input {
     }
     public double getDouble() {
         double number = scanner.nextDouble();
-        scanner.nextLine();
         return number;
     }
+
 }

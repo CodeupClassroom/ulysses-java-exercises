@@ -1,10 +1,8 @@
 package shapes;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.jar.JarEntry;
 
 public class ShapesTest {
     public static void main(String[] args) {
