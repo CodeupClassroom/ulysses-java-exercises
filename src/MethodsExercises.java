@@ -1,3 +1,5 @@
+import org.jetbrains.annotations.Contract;
+
 import java.util.Scanner;
 
 public class MethodsExercises {
@@ -20,11 +22,13 @@ public class MethodsExercises {
 
     }
 
-    // pure function
+
+    @Contract(pure = true)
     public static int add(int a, int b) {
         return a + b;
     }
 
+    @Contract(pure = true)
     public static double add(double a, double b) {
         return a + b;
     }

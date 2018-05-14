@@ -14,5 +14,6 @@ public abstract class Employee {
     public String getDepartment() {
         return department;
     }
+
     public abstract String work();
 }
