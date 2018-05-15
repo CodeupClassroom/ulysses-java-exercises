@@ -1,45 +1,45 @@
 import util.Input;
 
-import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class ExceptionsDemo {
 
     public static void main(String[] args) {
-        int number = getNumberAtIndex();
 
-        System.out.println("you got the number of :  " + number);
+        try {
+            int number = getNumberAtIndex();
+        } catch(ArrayIndexOutOfBoundsException e) {
+            System.out.println(e.getMessage());
+        }
     }
 
-    protected static int getNumberAtIndex() {
+    protected static void getFavoriteFood() throws Exception {
+        Scanner scan = new Scanner(System.in).useDelimiter("\n");
+        System.out.println("What's your favorite food? ");
+        String food = scan.next();
+        if(!food.equalsIgnoreCase("pizza")) {
+            throw new Exception("The application breaks unless your favorite food is pizza.");
+        }
+
+        System.out.println("Good, yay! Welcome to the pizza club.");
+
+    }
+
+
+    protected static int getNumberAtIndex() throws ArrayIndexOutOfBoundsException {
         Input input = new Input();
 
         int[] numbers = {5, 6, 7, 8};
 
         System.out.println("Please input the index of the element you want to access...");
-        int index = -1;
 
-        try {
+        int index = input.getInt();
 
-            index = input.getInt();
-            return numbers[index];
-
-        } catch (InputMismatchException e) {
-            System.out.println("Be sure to put in an integer");
-            System.out.println(e);
-            return getNumberAtIndex();
-
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("There is no element at the provided index. The array only has " + numbers.length + " number of elements.");
-            return getNumberAtIndex();
-
-        } catch(Exception e) {
-            System.out.println("There's any other exception");
-            System.out.println(e);
-        } finally {
-            System.out.println("This runs whether there as an exception or not...");
+        if(index < 0 || index >= numbers.length) {
+            throw new ArrayIndexOutOfBoundsException("No element at that index, yo!");
         }
+        return numbers[index];
 
-        return index;
     }
 
 }
